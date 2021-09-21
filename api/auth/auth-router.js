@@ -45,7 +45,7 @@ router.post('/login', validateUser, (req, res, next) => {
         next({
             status: 200,
             message: token,
-            token: token,
+            token: token,  //could not make this guy show on the front-end, so added it to the message body
         });
     } else {
         next({ status: 401, message: 'Niet Breh'})
