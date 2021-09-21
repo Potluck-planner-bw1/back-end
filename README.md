@@ -2,7 +2,7 @@
 
 GET ALL USERS
 
-https://potluckbw-backend.herokuapp.com/
+https://potluck-bw-backend.herokuapp.com/
 
 get request to:
     /api/users
