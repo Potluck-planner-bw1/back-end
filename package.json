@@ -7,6 +7,7 @@
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
+    "cycle": "knex migrate:rollback && knex migrate:latest",
     "migrateh": "heroku run knex migrate:latest -a potluckbw-backend",
     "rollbackh": "heroku run knex migrate:rollback -a potluckbw-backend",
     "databaseh": "heroku pg:psql -a potluckbw-backend",
