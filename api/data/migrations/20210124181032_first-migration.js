@@ -7,7 +7,7 @@ exports.up = async (knex) => {
       users.timestamps(false, true);
     })
     .createTable("potlucks", (potlucks) => {
-      potlucks.increments();
+      potlucks.increments("potluck_id");
       potlucks.string("title", 128).notNullable().unique();
       potlucks.date("date").notNullable();
       potlucks.time("time").notNullable();

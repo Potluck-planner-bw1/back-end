@@ -14,12 +14,15 @@ async function getByUser(user_id) {
   return potluck;
 }
 
-const add = (potluck) => {
-  return db("potlucks")
-    .insert(potluck)
-    .then((potluck_id) => {
-      return db("potlucks").where("potluck_id", potluck_id).first();
-    });
+const add = async (potluck) => {
+  const [newPotluckObject] = await db("potlucks").insert(potluck, [
+    "potluck_id",
+    "title",
+    "date",
+    "time",
+    "location",
+  ]);
+  return newPotluckObject;
 };
 
 module.exports = {
