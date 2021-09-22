@@ -26,6 +26,7 @@ const add = async (potluck) => {
 };
 
 module.exports = {
+  getAll,
   getByUser,
   add,
 };
