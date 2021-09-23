@@ -1,7 +1,7 @@
 const db = require("../data/db-config");
 
 function getAll() {
-  db("potlucks");
+  return db("potlucks");
 }
 
 async function getByUser(user_id) {
