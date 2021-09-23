@@ -27,10 +27,10 @@ const add = async (potluck) => {
       "time",
       "location",
     ]);
+    return newPotluckObject;
   } catch (err) {
     console.log(err);
   }
-  return newPotluckObject;
 };
 
 module.exports = {
