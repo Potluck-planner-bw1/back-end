@@ -14,7 +14,7 @@ async function getByUser(user_id) {
 
     return potluck;
   } catch (err) {
-    next(err);
+    console.log(err);
   }
 }
 
@@ -28,7 +28,7 @@ const add = async (potluck) => {
       "location",
     ]);
   } catch (err) {
-    next(err);
+    console.log(err);
   }
   return newPotluckObject;
 };
